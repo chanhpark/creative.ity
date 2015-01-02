@@ -1,7 +1,13 @@
-<% @post.each do |post| %>
+<% @posts.each do |post| %>
 <%= link_to (image_tag post.image.url(:small)), post %>
   <h2><%= link_to post.title, post %></h2>
-  <p><%= post.comments.count %> Comments</p>
+  <p><%= post.comments.count %>
+    Comments
+  </p>
+  <p>
+    <%= post.get_likes.size %>
+    Likes
+  </p>
 <% end %>
 
 <%= link_to "Add New Creativeity", new_post_path %>
