@@ -22,10 +22,9 @@
       <%= pluralize(@post.get_upvotes.size, "Like") %>
       <% end %>
       <%= link_to dislike_post_path(@post), method: :get, class: "data" do %>
-        <i class="fa fa-thumbs-o-down">
+        <i class="fa fa-thumbs-o-down"></i>
       <%= pluralize(@post.get_downvotes.size, "Dislike") %>
       <% end %>
-    </i>
       <p class="data">
         <i class="fa fa-comments-o"></i>
         <%= pluralize(@post.comments.count, "Comment") %>
@@ -36,7 +35,7 @@
       <% end %>
     </div>
     <div id="random_post">
-      <h3>Random Inspiration</h3>
+      <h3>Hit or Miss</h3>
       <div class="post">
         <div class="post_image">
           <%= link_to (image_tag @random_post.image.url(:medium)), post_path(@random_post) %>
