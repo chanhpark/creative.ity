@@ -1,13 +1,50 @@
-<% @posts.each do |post| %>
-<%= link_to (image_tag post.image.url(:small)), post %>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= post.comments.count %>
-    Comments
-  </p>
-  <p>
-    <%= post.get_likes.size %>
-    Likes
-  </p>
+<% if user_signed_in? %>
+<p id="intro">
+  Hello
+  <%= current_user.username %>
+  <br/>
+  <span>
+    What drives you? Share your drive!
+  </span>
+</p>
+<% else %>
+<p id="intro">
+  What is your Creative.ity?
+  <br/>
+  <span>
+  Share your drive!
+  </span>
+</p>
 <% end %>
-
-<%= link_to "Add New Creativeity", new_post_path %>
+<div id="posts">
+  <% @posts.each do |post| %>
+  <div class="post">
+    <div class="post_image">
+      <%= link_to (image_tag post.image.url(:small)), post %>
+    </div>
+    <div class="post_content">
+      <div class="title">
+        <h2>
+          <%= link_to post.title, post %>
+        </h2>
+      </div>
+      <div class="data clearfix">
+        <p class="username">
+          Shared by
+          <%= post.user.username %>
+        </p>
+        <p class="buttons">
+          <span>
+            <i class="fa fa-comments-o"></i>
+            <%= post.comments.count %>
+          </span>
+          <span>
+            <i class="fa fa-thumbs-o-up"></i>
+            <%= post.get_likes.size %>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
