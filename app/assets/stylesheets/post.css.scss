@@ -37,7 +37,7 @@
     margin-top: -3.2rem;
     float: left;
     h3 {
-      font-size: 1rem;
+      font-size: 2rem;
     }
     .post {
       background: #F8F9FA;
@@ -61,6 +61,7 @@
           a {
             text-decoration: none;
             color: #333233;
+            font-size: 2rem;
             &:hover {
               color: #50A7C7;
             }
@@ -71,7 +72,7 @@
           color: #969696;
           .username, .buttons {
             margin: 0;
-            font-size: .8rem;
+            font-size: 1.5rem;
           }
           .username {
             float: left;
@@ -100,7 +101,7 @@
   }
   .description {
     margin: 2rem 0;
-    font-size: 1.1rem;
+    font-size: 1.75rem;
     line-height: 1.5;
     color: #969696;
   }

@@ -1,4 +1,5 @@
 /*
+*= require 'masonry/transitions'
 *= require_self
 */
 
@@ -8,7 +9,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .wrapper {
@@ -40,7 +41,7 @@ header {
   border-bottom: 1px solid #E4E4E4;
   #logo {
     float: left;
-    font-size: 1.75rem;
+    font-size: 2rem;
     a {
       color: #333233;
       text-decoration: none;
@@ -62,5 +63,7 @@ header {
     }
   }
 }
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import 'home.css.scss';
 @import 'post.css.scss';
