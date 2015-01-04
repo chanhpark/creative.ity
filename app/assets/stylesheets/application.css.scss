@@ -1,5 +1,4 @@
 /*
-*= require 'masonry/transitions'
 *= require_self
 */
 
@@ -65,5 +64,5 @@ header {
 }
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import 'home.css.scss';
-@import 'post.css.scss';
+@import 'home.scss';
+@import 'post.scss';
