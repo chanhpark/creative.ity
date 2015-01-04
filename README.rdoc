@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-Creative.ity
-======
-
-[![Code Climate](https://codeclimate.com/github/chanhpark/creative.ity/badges/gpa.svg)](https://codeclimate.com/github/chanhpark/creative.ity)
-[![Test Coverage](https://codeclimate.com/github/chanhpark/creative.ity/badges/coverage.svg)](https://codeclimate.com/github/chanhpark/creative.ity)
