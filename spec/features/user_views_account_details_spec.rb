@@ -5,8 +5,8 @@ feature "user sees account details", %Q{
   So I can see my account & make any changes
 
   Acceptance Criteria:
-  -[ ] I see my first name, last name, email, and avatar
-  -[ ] i see a link to edit my information
+  -[ ] I see my username,email, and can change my password
+  -[ ] I see a link to edit my information
   } do
 
   scenario "visit your account detail and edit" do
@@ -20,7 +20,7 @@ feature "user sees account details", %Q{
     fill_in "Username", with: "change"
     fill_in "Current password", with: user.password
     click_on "Update"
-    
+
     expect(page).to have_content "Your account has been updated successfully"
     expect(page).to have_content "Hello change"
     expect(page).to have_content "What keeps you going?"
