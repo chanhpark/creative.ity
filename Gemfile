@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'rails_12factor', group: :production
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,7 +13,9 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'aws-s3'
+gem 'aws-sdk'
+gem 'rake'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug'
@@ -30,3 +31,4 @@ gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
 gem 'launchy', group: [:development, :test]
 gem 'factory_girl_rails', group: [:development, :test]
+gem 'rails_12factor', group: :production
