@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'rails', '4.2.0'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,6 +14,7 @@ gem 'simple_form', '~> 3.1.0'
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'aws-s3'
 
 group :development, :test do
   gem 'byebug'
