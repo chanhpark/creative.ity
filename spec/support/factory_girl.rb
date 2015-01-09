@@ -2,14 +2,14 @@ require 'factory_girl'
 
 FactoryGirl.define do
   factory :user do
-    username 'examples'
+    username "examples"
     sequence(:email) {|n| "user#{n}@example.com" }
-    password 'password'
-    password_confirmation 'password'
+    password "password"
+    password_confirmation "password"
   end
 
   factory :post do
-    title 'yeahhhhhhhooooo'
+    title "yeahhhhhhhooooo"
     link "www.example.com"
     description "Lorem Ipsum is simply dummy text of the printing
      and typesetting industry. Lorem Ipsum has been the industry's

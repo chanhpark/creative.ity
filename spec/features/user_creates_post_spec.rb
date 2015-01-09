@@ -7,7 +7,6 @@ feature "user creates Post", %{
   } do
 
   scenario "if signed in" do
-
     user = FactoryGirl.create(:user)
     post = FactoryGirl.create(:post)
 
@@ -28,10 +27,9 @@ feature "user creates Post", %{
 
     click_on "Create Post"
 
-      expect(page).to have_content post.title
-      expect(page).to have_content post.description
-      expect(page).to have_content "Hit or Miss"
-
+    expect(page).to have_content post.title
+    expect(page).to have_content post.description
+    expect(page).to have_content "Hit or Miss"
 
   end
   scenario "site is not created successfully" do
