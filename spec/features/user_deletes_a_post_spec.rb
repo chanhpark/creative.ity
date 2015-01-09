@@ -1,9 +1,9 @@
 require "rails_helper"
 
-feature "User Deletes A Site", %{
+feature "User Deletes A Post", %{
   As a user,
-  I want to delete a site that I created,
-  So that I can remove old sites.
+  I want to delete a Post that I created,
+  So that I can show better posts.
 
   Acceptance Criteria:
 
