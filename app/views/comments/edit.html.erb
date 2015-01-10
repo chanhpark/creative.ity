@@ -1,6 +1,9 @@
 <h1> Edit Comment </h1>
-
-<%= simple_form_for ([@post, @comment]) do |f| %>
-<%= f.input :content, label: "Reply to thread" %>
-<%= f.button :submit, label: "Update Comment", class: "button" %>
-<% end %>
+<div class="comment">
+  <p class="content">
+  <%= simple_form_for ([@post, @comment]) do |f| %>
+  <%= f.input :content, label: "Reply to thread" %>
+  <%= f.button :submit, label: "Update Comment", class:"button" %>
+  <% end %>
+  </p>
+</div>
