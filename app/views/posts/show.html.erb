@@ -80,6 +80,12 @@
       <%= comment.content %>
     </p>
   </div>
+  <% unless current_user == nil %>
+  <% if comment.user_id == current_user.id || !current_user.nil? %>
+  <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %> |
+  <%= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <% end %>
   <% end %>
   <%= render "comments/form" %>
 </div>
