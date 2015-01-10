@@ -43,12 +43,12 @@ class PostsController < ApplicationController
 
   def upvote
     @post.upvote_by current_user
-    redirect_to :back
+    redirect_to :back, notice: "You Liked this post"
   end
 
   def downvote
     @post.downvote_by current_user
-    redirect_to :back
+    redirect_to :back, notice: "You Disliked this post"
   end
 
   private

@@ -21,7 +21,7 @@
         <i class="fa fa-thumbs-o-up"></i>
       <%= pluralize(@post.get_upvotes.size, "Like") %>
       <% end %>
-      <%= link_to dislike_post_path(@post), method: :get, class: "data" do %>
+      <%= link_to dislike_post_path(@post),  method: :get, class: "data" do %>
         <i class="fa fa-thumbs-o-down"></i>
       <%= pluralize(@post.get_downvotes.size, "Dislike") %>
       <% end %>
