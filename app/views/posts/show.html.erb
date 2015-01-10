@@ -72,8 +72,8 @@
     <%= pluralize(@post.comments.count, "Comment") %>
   </h2>
   <div class="comment">
+  <% @comments.each do |comment| %>
     <p class="content">
-      <% @comments.each do |comment| %>
       <%= comment.content %>
     </p>
       <%= comment.user.username %> <%= time_ago_in_words(comment.created_at) %> ago
