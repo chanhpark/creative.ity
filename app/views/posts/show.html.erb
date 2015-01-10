@@ -76,13 +76,11 @@
     <p class="content">
       <%= comment.content %>
     </p>
-      <%= comment.user.username %> <%= time_ago_in_words(comment.created_at) %> ago
-    <% unless current_user == nil %>
+      Posted by <%= comment.user.username %> <%= time_ago_in_words(comment.created_at) %> ago
       <% if comment.user_id == current_user.id || current_user.nil? %>
       <div class="updates">
         <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %> |
         <%= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
-      <% end %>
     <% end %>
   <% end %>
 
