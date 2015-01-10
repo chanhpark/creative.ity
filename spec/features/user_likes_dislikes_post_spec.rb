@@ -41,7 +41,6 @@ feature "votes on post", %{
       click_link("Dislike")
 
       expect(page).to have_content post.get_downvotes.size
-      save_and_open_page
     end
 
     scenario "User can change vote" do
