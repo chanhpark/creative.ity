@@ -72,4 +72,41 @@ feature "user adds comment", %{
       expect(page).to have_content "You need to sign in
       or sign up before continuing."
     end
+    scenario "user tries to edit comments to a post with blank" do
+      user = FactoryGirl.create(:user)
+
+      visit new_user_session_path
+
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.password
+
+      click_button "Log in"
+
+      visit post_path(test_post)
+
+      fill_in "Reply to thread", with: "awesome YES!"
+      click_on "Create Comment"
+      click_on "Edit Comment"
+      fill_in "Reply to thread", with: ""
+      click_on "Update Comment"
+
+      expect(page).to have_content "can't be blank"
+    end
+    scenario "user tries comment blank to post" do
+      user = FactoryGirl.create(:user)
+
+      visit new_user_session_path
+
+      fill_in "Email", with: user.email
+      fill_in "Password", with: user.password
+
+      click_button "Log in"
+
+      visit post_path(test_post)
+
+      fill_in "Reply to thread", with: ""
+      click_on "Create Comment"
+
+      expect(page).to have_content "You cant post a blank comment"
+    end
   end

@@ -14,7 +14,8 @@ class CommentsController < ApplicationController
         redirect_to post_path(@post),
         notice: "Successfully added your comment"
       else
-        render "new"
+        redirect_to post_path(@post),
+        notice: "You cant post a blank comment"
       end
     else
       redirect_to post_path(@post),
@@ -29,12 +30,13 @@ class CommentsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
 
     if @comment.update(comment_params)
       redirect_to @comment.post, notice: "Comment Updated Successfully"
     else
-      render :edit
+      render :edit, notice: "can't be blank"
     end
   end
 
