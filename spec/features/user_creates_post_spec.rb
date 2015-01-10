@@ -21,6 +21,9 @@ feature "user creates Post", %{
 
     click_on "Add Creative.ity"
 
+    # attach_file("post[image]", File.join(
+    # Rails.root, "spec/data/iron_capt.png")
+    # )
     fill_in "Title", with: post.title
     fill_in "Link", with: post.link
     fill_in "Description", with: post.description
