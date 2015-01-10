@@ -1,0 +1,7 @@
+<h1> Create a comment</h1>
+<p class="content">
+  <%= simple_form_for ([@post, @post.comments.build]) do |f| %>
+  <%= f.input :content, label: "Reply to thread" %>
+  <%= f.button :submit, class: "button" %>
+  <% end %>
+</p>
