@@ -17,6 +17,7 @@
 </p>
 <% end %>
 <div id="posts">
+ <% if @posts.present? %>
   <% @posts.each do |post| %>
   <div class="post">
     <div class="post_image">
@@ -46,5 +47,8 @@
       </div>
     </div>
   </div>
+  <% end %>
+  <% else %>
+  <h3> Sorry No results found</h3>
   <% end %>
 </div>

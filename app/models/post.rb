@@ -6,4 +6,16 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :link, presence: true
   acts_as_votable
+
+  def self.search(query)
+    if query
+      where(
+      "plainto_tsquery(?) @@ " +
+      "to_tsvector('english', LOWER(title) || ' ' || description)",
+      query
+      )
+    else
+      all
+    end
+  end
 end
