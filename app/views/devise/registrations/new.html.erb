@@ -17,6 +17,7 @@
         <% end %>
 
         <div class="form-input">
+          <%= f.input :username, required: true, autofocus: true %>
           <%= f.input :email, required: true, autofocus: true %>
           <%= f.input :password, required: true,
                       hint: (" #{@minimum_password_length} characters minimum" if @validatable) %>
