@@ -16,7 +16,6 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'aws-sdk'
 gem 'rake'
 gem 'dotenv-rails'
-gem 'searchkick', '~> 0.8.5'
 
 group :development, :test do
   gem 'byebug'
