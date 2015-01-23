@@ -10,6 +10,7 @@ Creative.ity is an App where people can come and share their inspiration. This i
 Here are some screenshots of Creative.ity
 
 Home Page
-![alt tag](home.png)
-D3 Visualization
+![alt tag](index.png)
+
+Show Page
 ![alt tag](show.png)
