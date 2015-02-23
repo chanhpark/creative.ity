@@ -15,6 +15,8 @@ Home Page
 Show Page
 ![alt tag](show.png)
 
+Jan 31st, 2015
+- added google analytics
+
 **Things to do**
-- implement Google Analytics to see traffic from Breakable toy Vent.it
 - Twitter Authentication to allow people to tweet an image from Creative.ity
